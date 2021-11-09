@@ -25,7 +25,7 @@ export class BookComponent implements OnInit {
     this.from = event;
     console.log(this.to);
     this.flights = flightsData.filter(function (entry) {
-      if (this.to !== "") {
+      if (this.to !== undefined) {
         return entry.from.includes(event) && entry.to.includes(this.to);
       } else {
         return entry.from.includes(event);
