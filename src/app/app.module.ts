@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
-import { ContactComponent } from './contact/contact.component';
+import { BookComponent } from './book/book.component';
 import { MainComponent } from './main/main.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -35,7 +35,7 @@ import { APP_BASE_HREF } from '@angular/common';
 const Routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
   { path: 'blog', component: BlogComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'book', component: BookComponent },
   { path: 'main', component: MainComponent },
 ];
 
@@ -60,7 +60,7 @@ const Routes: Routes = [
     HelloComponent,
     HomeComponent,
     BlogComponent,
-    ContactComponent,
+    BookComponent,
     MainComponent,
     ChatComponent,
     calendarComponent,

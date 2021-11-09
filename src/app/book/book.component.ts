@@ -11,10 +11,10 @@ interface Flight {
 
 @Component({
   selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css'],
+  templateUrl: './book.component.html',
+  styleUrls: ['./book.component.css'],
 })
-export class ContactComponent implements OnInit {
+export class BookComponent implements OnInit {
   flights: Flight[] = flightsData;
 
   constructor() {}
