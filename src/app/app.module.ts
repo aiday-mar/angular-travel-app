@@ -29,6 +29,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MaterialExampleModule } from './material.module';
 import { calendarComponent } from './calendar/calendar.component';
 
+//
+import { APP_BASE_HREF } from '@angular/common';
+
 const Routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
   { path: 'blog', component: BlogComponent },
@@ -63,6 +66,7 @@ const Routes: Routes = [
     calendarComponent,
   ],
   bootstrap: [AppComponent],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
 })
 export class AppModule {
   /*
