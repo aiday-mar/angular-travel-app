@@ -7,7 +7,6 @@ import { HelloComponent } from './hello.component';
 import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
 import { BookComponent } from './book/book.component';
-import { MainComponent } from './main/main.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -36,7 +35,6 @@ const Routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'book', component: BookComponent },
-  { path: 'main', component: MainComponent },
 ];
 
 @NgModule({
@@ -61,7 +59,6 @@ const Routes: Routes = [
     HomeComponent,
     BlogComponent,
     BookComponent,
-    MainComponent,
     ChatComponent,
     calendarComponent,
   ],
