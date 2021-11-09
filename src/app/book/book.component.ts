@@ -16,8 +16,8 @@ interface Flight {
 })
 export class BookComponent implements OnInit {
   flights: Flight[] = flightsData;
-  from: string = "";
-  to: string = "";
+  from: string = '';
+  to: string = '';
 
   constructor() {}
 
@@ -25,7 +25,7 @@ export class BookComponent implements OnInit {
     this.from = event;
     console.log(this.to);
     this.flights = flightsData.filter(function (entry) {
-      if (this.to !== undefined) {
+      if (this.to !== "") {
         return entry.from.includes(event) && entry.to.includes(this.to);
       } else {
         return entry.from.includes(event);
@@ -36,7 +36,7 @@ export class BookComponent implements OnInit {
   onChangeTo(event) {
     this.to = event;
     this.flights = flightsData.filter(function (entry) {
-      if (this.from !== "") {
+      if (this.from !== '') {
         return entry.to.includes(event) && entry.from.includes(this.from);
       } else {
         return entry.to.includes(event);
