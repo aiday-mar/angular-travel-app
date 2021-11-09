@@ -1,3 +1,3 @@
 # Angular travelling website
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-app)
+Link : https://stackblitz.com/edit/angular-travel-app
