@@ -1,0 +1,9 @@
+{
+  "lang": "en",
+  "name": "Travel Angular",
+  "scope": "/",
+  "display": "fullscreen",
+  "start_url": "/",
+  "short_name": "Travel Angular",
+  "orientation": "any"
+}
