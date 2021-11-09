@@ -16,6 +16,8 @@
           name="from"
           placeholder=""
           ngModel
+          [ngModel]="from"
+          (ngModelChange)="onChangeFrom($event)"
         />
       </div>
       <div class="form-group col-md-6">
@@ -26,7 +28,8 @@
           id="to"
           name="to"
           placeholder=""
-          ngModel
+          [ngModel]="to"
+          (ngModelChange)="onChangeTo($event)"
         />
       </div>
     </div>
