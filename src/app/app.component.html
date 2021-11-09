@@ -302,7 +302,10 @@
   </style>
 </head>
 
-<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+<nav
+  class="navbar navbar-expand-sm navbar-dark"
+  style="background-color:#8ae2ff"
+>
   <button
     class="navbar-toggler"
     type="button"
@@ -315,10 +318,10 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" routerLink="main">TRAVEL</a>
+    <a class="navbar-brand" routerLink="main" style="color:#009dd1">TRAVEL</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink=""> Explore </a>
+        <a class="nav-link" routerLink="">Explore</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" routerLink="blog">Blog</a>
@@ -334,7 +337,11 @@
         placeholder="Search"
         aria-label="Search"
       />
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+      <button
+        class="btn my-2 my-sm-0"
+        type="submit"
+        style="background-color: white; border: 0px; color:blue;"
+      >
         Search
       </button>
     </form>
