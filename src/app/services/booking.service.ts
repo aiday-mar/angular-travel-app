@@ -13,6 +13,7 @@ interface Flight {
 export class BookingService {
   flightsToPay: Flight[] = [];
   flightIdsToPay: String[] = [];
+  totalFlights: number = 0;
 
   constructor() {}
 }

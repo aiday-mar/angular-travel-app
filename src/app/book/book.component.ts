@@ -44,20 +44,24 @@ export class BookComponent implements OnInit {
       this.bookingService.flightIdsToPay = this.bookingService.flightsToPay.map(
         (entry) => entry.id
       );
+      this.bookingService.totalFlights =
+        this.bookingService.totalFlights + Number(price);
     } else {
       this.bookingService.flightsToPay =
         this.bookingService.flightsToPay.filter((entry) => entry.id !== id);
       this.bookingService.flightIdsToPay = this.bookingService.flightsToPay.map(
         (entry) => entry.id
       );
+      this.bookingService.totalFlights =
+        this.bookingService.totalFlights - Number(price);
     }
   }
 
-  getColor(id : string) {
+  getColor(id: string) {
     if (this.bookingService.flightIdsToPay.indexOf(id) == -1) {
-      return "grey"
+      return 'grey';
     } else {
-      return "green"
+      return 'green';
     }
   }
 
