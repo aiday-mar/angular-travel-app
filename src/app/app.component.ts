@@ -18,9 +18,7 @@ interface Flight {
 })
 export class AppComponent {
   name = 'Angular';
-  flightsToPay: Flight[];
 
-  constructor(private bookingService: BookingService) {
-    this.flightsToPay = bookingService.flightsToPay;
-  }
+  constructor(private bookingService: BookingService) {}
+
 }

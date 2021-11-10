@@ -93,6 +93,7 @@
               viewBox="0 0 576 512"
               style="height:20px;color:grey;"
               id="{{ flight.id }}"
+              [style.color]="getColor(flight.id)"
             >
               <path
                 fill="currentColor"

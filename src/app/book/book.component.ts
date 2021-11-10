@@ -51,15 +51,14 @@ export class BookComponent implements OnInit {
         (entry) => entry.id
       );
     }
+  }
 
-    console.log(this.flightIdsToPay);
-    /*
-    if (document.getElementById(id).style.color == 'grey') {
-      document.getElementById(id).style.color = 'green';
+  getColor(id : string) {
+    if (this.flightIdsToPay.indexOf(id) == -1) {
+      return "grey"
     } else {
-      document.getElementById(id).style.color = 'grey';
+      return "green"
     }
-    */
   }
 
   onChangeFrom(event) {
