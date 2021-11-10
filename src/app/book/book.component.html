@@ -69,7 +69,18 @@
         <td>{{ flight.arrival }}</td>
         <td>{{ flight.price }}</td>
         <td>
-          <a href="#">
+          <a
+            (click)="
+              saveBooking(
+                flight.from,
+                flight.to,
+                flight.departure,
+                flight.arrival,
+                flight.price
+              )
+            "
+            style="cursor: pointer;"
+          >
             <svg
               aria-hidden="true"
               focusable="false"

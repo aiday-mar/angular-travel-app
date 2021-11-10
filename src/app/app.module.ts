@@ -33,6 +33,7 @@ import { APP_BASE_HREF } from '@angular/common';
 
 // Payment portal
 import { PaymentComponent } from './payment/payment.component';
+import { BookingService } from './services/booking.service';
 
 const Routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
@@ -68,6 +69,6 @@ const Routes: Routes = [
     PaymentComponent
   ],
   bootstrap: [AppComponent],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }, BookingService],
 })
 export class AppModule {}

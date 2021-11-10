@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import flightsData from './flights.json';
+import { BookingService } from '../services/booking.service';
 
 interface Flight {
   from: String;
@@ -10,14 +11,31 @@ interface Flight {
 }
 
 @Component({
-  selector: 'book-selector',
+  selector: 'app-contact',
   templateUrl: './book.component.html',
   styleUrls: ['./book.component.css'],
 })
 export class BookComponent implements OnInit {
   flights: Flight[] = flightsData;
 
-  constructor() {}
+  constructor(private bookingService: BookingService) {}
+
+  saveBooking(
+    from: string,
+    to: string,
+    departure: string,
+    arrival: string,
+    price: string
+  ) {
+    const toSave: Flight = {
+      from: from,
+      to: to,
+      departure: departure,
+      arrival: arrival,
+      price: price,
+    };
+    this.bookingService.flightsToPay.push(toSave);
+  }
 
   onChangeFrom(event) {
     this.flights = flightsData.filter(function (entry) {

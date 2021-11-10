@@ -1,4 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { BookingService } from '../services/booking.service';
+
+interface Flight {
+  from: String;
+  to: String;
+  departure: String;
+  arrival: String;
+  price: String;
+}
 
 @Component({
   selector: 'payment-selector',
@@ -7,7 +16,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentComponent implements OnInit {
 
-  constructor() {}
+  flightsToPay: Flight[];
+
+  constructor(private bookingService : BookingService) {
+    this.flightsToPay = bookingService.flightsToPay;
+  }
 
   ngOnInit() {}
 }
