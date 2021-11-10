@@ -18,7 +18,7 @@ interface Flight {
 })
 export class BookComponent implements OnInit {
   flights: Flight[] = flightsData;
-  flightIdsToPay: String[] = [];
+  //flightIdsToPay: String[] = [];
 
   constructor(private bookingService: BookingService) {}
 
@@ -39,22 +39,22 @@ export class BookComponent implements OnInit {
       price: price,
     };
 
-    if (this.flightIdsToPay.indexOf(id) == -1) {
+    if (this.bookingService.flightIdsToPay.indexOf(id) == -1) {
       this.bookingService.flightsToPay.push(toSave);
-      this.flightIdsToPay = this.bookingService.flightsToPay.map(
+      this.bookingService.flightIdsToPay = this.bookingService.flightsToPay.map(
         (entry) => entry.id
       );
     } else {
       this.bookingService.flightsToPay =
         this.bookingService.flightsToPay.filter((entry) => entry.id !== id);
-      this.flightIdsToPay = this.bookingService.flightsToPay.map(
+      this.bookingService.flightIdsToPay = this.bookingService.flightsToPay.map(
         (entry) => entry.id
       );
     }
   }
 
   getColor(id : string) {
-    if (this.flightIdsToPay.indexOf(id) == -1) {
+    if (this.bookingService.flightIdsToPay.indexOf(id) == -1) {
       return "grey"
     } else {
       return "green"

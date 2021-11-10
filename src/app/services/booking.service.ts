@@ -12,6 +12,7 @@ interface Flight {
 @Injectable()
 export class BookingService {
   flightsToPay: Flight[] = [];
+  flightIdsToPay: String[] = [];
 
   constructor() {}
 }
