@@ -39,6 +39,7 @@ export class BookComponent implements OnInit {
     };
 
     this.bookingService.flightsToPay.push(toSave);
+    console.log(id);
   }
 
   onChangeFrom(event) {
