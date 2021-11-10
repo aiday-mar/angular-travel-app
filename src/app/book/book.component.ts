@@ -18,6 +18,7 @@ interface Flight {
 })
 export class BookComponent implements OnInit {
   flights: Flight[] = flightsData;
+  flightIdsToPay: String[] = [];
 
   constructor(private bookingService: BookingService) {}
 
@@ -38,8 +39,20 @@ export class BookComponent implements OnInit {
       price: price,
     };
 
-    this.bookingService.flightsToPay.push(toSave);
-    
+    if (this.flightIdsToPay.indexOf(id) == -1) {
+      this.bookingService.flightsToPay.push(toSave);
+      this.flightIdsToPay = this.bookingService.flightsToPay.map(
+        (entry) => entry.id
+      );
+    } else {
+      this.bookingService.flightsToPay =
+        this.bookingService.flightsToPay.filter((entry) => entry.id !== id);
+      this.flightIdsToPay = this.bookingService.flightsToPay.map(
+        (entry) => entry.id
+      );
+    }
+
+    console.log(this.flightIdsToPay);
     /*
     if (document.getElementById(id).style.color == 'grey') {
       document.getElementById(id).style.color = 'green';
