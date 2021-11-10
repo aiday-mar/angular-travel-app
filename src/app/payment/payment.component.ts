@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BookingService } from '../services/booking.service';
 
 interface Flight {
+  id: String;
   from: String;
   to: String;
   departure: String;
@@ -15,10 +16,9 @@ interface Flight {
   styleUrls: ['./payment.component.css'],
 })
 export class PaymentComponent implements OnInit {
-
   flightsToPay: Flight[];
 
-  constructor(private bookingService : BookingService) {
+  constructor(private bookingService: BookingService) {
     this.flightsToPay = bookingService.flightsToPay;
   }
 

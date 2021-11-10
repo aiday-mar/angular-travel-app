@@ -3,6 +3,7 @@ import flightsData from './flights.json';
 import { BookingService } from '../services/booking.service';
 
 interface Flight {
+  id: String;
   from: String;
   to: String;
   departure: String;
@@ -21,6 +22,7 @@ export class BookComponent implements OnInit {
   constructor(private bookingService: BookingService) {}
 
   saveBooking(
+    id: string,
     from: string,
     to: string,
     departure: string,
@@ -28,12 +30,14 @@ export class BookComponent implements OnInit {
     price: string
   ) {
     const toSave: Flight = {
+      id: id,
       from: from,
       to: to,
       departure: departure,
       arrival: arrival,
       price: price,
     };
+
     this.bookingService.flightsToPay.push(toSave);
   }
 

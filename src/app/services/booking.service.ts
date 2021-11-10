@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 interface Flight {
+  id: String;
   from: String;
   to: String;
   departure: String;
@@ -10,7 +11,6 @@ interface Flight {
 
 @Injectable()
 export class BookingService {
-
   flightsToPay: Flight[] = [];
 
   constructor() {}
