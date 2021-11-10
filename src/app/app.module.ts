@@ -40,6 +40,7 @@ const Routes: Routes = [
   { path: 'blog', component: BlogComponent },
   { path: 'book', component: BookComponent },
   { path: 'payment', component: PaymentComponent },
+  { path: 'payment/book', redirectTo: 'book' },
 ];
 
 @NgModule({

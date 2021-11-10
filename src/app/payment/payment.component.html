@@ -1,4 +1,5 @@
-<div style="margin:100px;">
+<h2 class="text-center mb-3" style="margin-top:50px">My flights</h2>
+<div style="margin:100px;" *ngIf="this.bookingService.flightsToPay.length != 0">
   <table class="table table-striped">
     <thead>
       <tr>
@@ -39,4 +40,14 @@
       </tr>
     </tbody>
   </table>
+</div>
+<div
+  *ngIf="this.bookingService.flightsToPay.length == 0"
+  style="text-align:center"
+>
+  You have not selected any flights. Search for flights and book your trip!
+
+  <a style="display:inline-block;height:40px;margin-top:5px;" routerLink="book">
+    Go
+  </a>
 </div>
