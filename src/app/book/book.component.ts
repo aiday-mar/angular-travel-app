@@ -39,7 +39,11 @@ export class BookComponent implements OnInit {
     };
 
     this.bookingService.flightsToPay.push(toSave);
-    console.log(id);
+    if (document.getElementById(id).style.color == 'grey') {
+      document.getElementById(id).style.color = 'green';
+    } else {
+      document.getElementById(id).style.color = 'grey';
+    }
   }
 
   onChangeFrom(event) {
