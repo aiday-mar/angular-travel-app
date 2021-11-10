@@ -28,13 +28,17 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MaterialExampleModule } from './material.module';
 import { calendarComponent } from './calendar/calendar.component';
 
-//
+// Setting base url
 import { APP_BASE_HREF } from '@angular/common';
+
+// Payment portal
+import { PaymentComponent } from './payment/payment.component';
 
 const Routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'book', component: BookComponent },
+  { path: 'payment', component: PaymentComponent },
 ];
 
 @NgModule({
@@ -61,14 +65,9 @@ const Routes: Routes = [
     BookComponent,
     ChatComponent,
     calendarComponent,
+    PaymentComponent
   ],
   bootstrap: [AppComponent],
   providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
 })
-export class AppModule {
-  /*
-  constructor(){         
-    firebase.initializeApp(environment.firebaseConfig);
-  }
-  */
-}
+export class AppModule {}

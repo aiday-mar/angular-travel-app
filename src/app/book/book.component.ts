@@ -10,7 +10,7 @@ interface Flight {
 }
 
 @Component({
-  selector: 'app-contact',
+  selector: 'book-selector',
   templateUrl: './book.component.html',
   styleUrls: ['./book.component.css'],
 })
