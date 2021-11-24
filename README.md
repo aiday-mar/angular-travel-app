@@ -3,5 +3,7 @@
 Link : https://travel-angular-aiday.web.app/
 
 ![alt text](https://github.com/aiday-mar/Angular-travel-app/blob/master/Angular_Picture_1.PNG?raw=true)
-<br/>
+
+<br/><br/>
+
 ![alt text](https://github.com/aiday-mar/Angular-travel-app/blob/master/Angular_Picture_2.PNG?raw=true)
