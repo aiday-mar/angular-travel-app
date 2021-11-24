@@ -16,6 +16,7 @@ interface Flight {
   templateUrl: './book.component.html',
   styleUrls: ['./book.component.css'],
 })
+
 export class BookComponent implements OnInit {
   flights: Flight[] = flightsData;
   //flightIdsToPay: String[] = [];
