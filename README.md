@@ -14,7 +14,6 @@ The chat window is made using the Kendo library. A div was appended to the top o
 
 <b>Booking interface</b>
 
-
 There is a booking page, where you can search for a flight (the results are filtered on typing). It is also possible to select the date range of the flight using the Material UI date calendar picker. You can select the flights of interest by clicking on the shopping cart icon. The select flights will appear in the checkout. In order to do this, I implemented a booking service as follows:
 
 ```
