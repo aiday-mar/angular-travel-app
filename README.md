@@ -2,6 +2,8 @@
 
 Link : https://travel-angular-aiday.web.app/
 
+Note : This website was developed using StackBlitz, hence why some files are missing as compared to if I was developing locally on my computer. 
+
 ![alt text](https://github.com/aiday-mar/Angular-travel-app/blob/master/Angular_Picture_1.PNG?raw=true)
 
 <br/><br/>
